@@ -8,18 +8,17 @@ export function loadCartItems() {
 	return{
 		type: LOAD_CART_ITEMS,
 	}
-
-
-export function addCartItems(item) {
+}
+export function addCartItem(item) {
 	return{
 		type: ADD_CART_ITEM,
 		payload: item
 	}
 }
 
-export function removeCartItems(item) {
+export function removeCartItem(itemId) {
 	return{
 		type: REMOVE_CART_ITEM,
-		payload: item
+		payload: itemId
 	}
 }
