@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Product from './Product';
-import { Link } from 'react-router';
+import uuid from 'uuid';
 
 const ProductList = ({
 	loading,
@@ -13,7 +13,7 @@ const ProductList = ({
 		{
 			products.map(product => (
 				<Product
-					key={product._id}
+					key={uuid.v4()}
 					onAddItem={onAddItem}
 					{...product}
 				/>

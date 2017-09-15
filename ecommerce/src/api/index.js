@@ -14,18 +14,19 @@ const API = {
 			const data = await response.json();
 			return data;
 		},
-		async save(item){
-			const response = await fetch(`${baseURL}/products`,{
-				method: 'POST',
-				headers: new headers({
-					'Content-Type': 'application/json',
-					accept: 'application/json'
-				}),
-				body: JSON.stringify(item)
-			});
-			const data = await response.json();
-			return data;
-		}
+		async save (item) {
+      		const response = await fetch(`${baseURL}/products`, {
+	        method: 'POST',
+	        headers: new Headers({
+	        	'Content-Type': 'application/json',
+	        	Accept: 'application/json'
+	        }),
+	        body: JSON.stringify(item)
+	      	});
+		    const data = await response.json();
+		    return data;
+    	}
+		
 	}
 }
 

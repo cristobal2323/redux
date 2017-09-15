@@ -3,7 +3,7 @@ import{
 	FETCH_PRODUCTS_SUCCESS,
 	FETCH_PRODUCTS_FAILURE,
 	SAVE_PRODUCT_INIT,
-	SAVE_PRODUCT_SUCCES,
+	SAVE_PRODUCT_SUCCESS,
 	SAVE_PRODUCT_FAILURE,
 } from '../actions/types';
 
@@ -44,7 +44,7 @@ export default function productListReducer(state = initialState.productList, act
 				loading: false,
 
 			};
-		case SAVE_PRODUCT_SUCCES:
+		case SAVE_PRODUCT_SUCCESS:
 			return{
 				...state,
 				products: [...state.products, action.payload],
